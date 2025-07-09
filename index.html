@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/car-front.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HotelToAirportTransportation - Luxury hotel shuttle service in Charleston, SC. Quick booking via QR code, voice assistant, or web form. Airport transfers in under a minute." />
+    <meta name="keywords" content="Charleston airport shuttle, hotel transportation, luxury shuttle service, airport transfers Charleston SC" />
+    <title>Mr Charles Premium Transportation - Charleston Hotel Shuttle Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/index.css">
+
+
+    <meta property="og:title" content="Mr Charles Premium Transportation - Charleston Hotel Shuttle Service" />
+    <meta property="og:description" content="Premium hotel shuttle service in Charleston, SC. Book your airport transfer in under a minute via QR code, voice bot, or web form." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mrcharlestransport.com" />
+    <style>
+      header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: #1F2937;
+          z-index: 1000;
+      }
+
+      html {
+          scroll-padding-top: 80px;
+      }
+
+      .font-sans {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+      }
+      .fas {
+          color: #AA8A5A;
+      }
+      
+      /* Keep checkmarks green */
+      .fa-check-circle, .fa-check {
+          color: #48bb78;
+      }
+
+      /* Make business model icons white */
+      [style*="background-color: #3498db"] .fas {
+          color: #AA8A5A !important;
+      }
+      .primary-color {
+          color: #AA8A5A;
+      }
+      .primary-bg {
+          background-color: #AA8A5A;
+      }
+  </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Mr Charles Premium Transportation",
+      "description": "Premium hotel shuttle service in Charleston, SC",
+      "url": "https://mrcharlestransport.com",
+      "@id": "https://mrcharlestransport.com",
+      "telephone": "+1-843-CHARLES",
+      "priceRange": "$$",
+      "serviceType": "Transportation Services",
+      "areaServed": {
+        "@type": "City",
+        "name": "Charleston",
+        "@type": "State",
+        "name": "South Carolina"
+      }
+    }
+    </script>
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.load({
+              verify: { projectID: '6862defab427060a7288b021' },
+              url: 'https://general-runtime.voiceflow.com',
+              versionID: 'production',
+              
+              voice: {
+                url: "https://runtime-api.voiceflow.com"
+              }, 
+            });
+          }
+          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      })(document, 'script');
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
