@@ -10,8 +10,8 @@ const Hero: React.FC<HeroProps> = () => {
         {/* ↓ shrink to 90 % (lg: 80 %) and center */}
         <div className="relative w-full lg:w-12/12 xl:w-5/5 h-full mx-auto">
           <img
-            src="/764036-1921x1282-desktop-hd-charleston-south-carolina-wallpaper.jpg"
-            srcSet="/764036-1921x1282-desktop-hd-charleston-south-carolina-wallpaper.jpg 1921w"
+            src="/charleston.jpg"
+            srcSet="/charleston.jpg 1921w"
             sizes="(max-width: 768px) 90vw, 80vw"
             alt="Charleston cityscape at twilight"
             className="w-full h-full object-cover"
