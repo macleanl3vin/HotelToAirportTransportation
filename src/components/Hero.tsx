@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = () => {
           className="text-5xl md:text-7xl font-light text-white mb-6 italic tracking-wide"
           style={{textShadow: "2px 2px 4px rgba(0,0,0,0.7)"}}
         >
-          Hotel To Airport Transportation
+          Hotel To Airport Transportation LLC
         </h1>
 
         {/* Subtitle */}
@@ -48,7 +48,7 @@ const Hero: React.FC<HeroProps> = () => {
 
         {/* Book My Ride Button */}
         <a
-          href="https://calendly.com/hoteltoairportllc/30min?month=2025-07&date=2025-07-09"
+          href="https://calendly.com/hoteltoairportllc/shuttle-service"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-12 py-4 rounded-full text-lg font-light hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-wider shadow-lg mb-16 inline-block"

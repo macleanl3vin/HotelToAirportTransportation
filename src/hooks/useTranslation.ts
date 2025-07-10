@@ -55,7 +55,7 @@ const translations: Translations = {
     // Features
     'features.title': 'Why Choose Us?',
     'features.safe': 'Trusted Experience',
-    'features.safe.desc': 'Over 30 years of dedicated passenger transportation and dedicated to courteous, professional service.',
+    'features.safe.desc': 'Over 30 years of dedicated passenger transportation and courteous, professional service.',
     'features.comfort': 'Premium Comfort',
     'features.comfort.desc': 'Travel in comfort with our spacious, immaculate 11-passenger van.',
     'features.reliable': 'Always Reliable',

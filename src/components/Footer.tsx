@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2 text-gray-300">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Airport Transfers
+                  Airport Transportation
                 </a>
               </li>
               <li>
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Service Hours</h4>
             <div className="space-y-2 text-gray-300">
               <div>Hotel Shuttles:</div>
-              <div>Daily: 8 AM - 12 PM, 1 PM - 5 PM</div>
+              <div>Daily: 8 AM - 12 PM, 1 PM - 4 PM</div>
             </div>
           </div>
         </div>

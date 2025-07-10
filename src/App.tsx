@@ -1,4 +1,3 @@
-import React, {useState} from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
@@ -19,8 +18,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-8">Our Partner Hotels</h2>
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            We provide exclusive shuttle services to Charleston's finest accommodations. Hotel guests enjoy priority booking and
-            special rates.
+            We provide exclusive shuttle services from our partner hotels to Charleston International Airport, with guests enjoying priority booking and special rates.
           </p>
 
           <div className="grid md:grid-cols-5 gap-6 mb-12">
@@ -41,7 +39,7 @@ function App() {
       {/* About Section */}
       <section id="about" className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-8">About Hotel To Airport Premium Transportation</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-8">About Hotel To Airport Transportation LLC</h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Mr. Charles has proudly served the passenger transportation industry for over 30 years! He has earned numerous glowing
