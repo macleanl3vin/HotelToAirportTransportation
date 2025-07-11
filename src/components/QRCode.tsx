@@ -65,7 +65,7 @@ const QRCode: React.FC<QRCodeProps> = ({bookingUrl, title = "Instant Booking QR"
           <h4 className="font-semibold text-yellow-800">For Hotel Partners</h4>
         </div>
         <p className="text-yellow-800 text-sm">
-          Display this QR code in your lobby, concierge desk, or guest rooms. Guests can instantly book premium transportation with
+          Display this QR code in your lobby, concierge desk, or guest rooms. Guests can instantly book transportation with
           their phones.
         </p>
       </div>

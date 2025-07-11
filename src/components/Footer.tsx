@@ -14,11 +14,11 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">Hotel To Airport Transportation LLC</h3>
-                <p className="text-sm text-blue-400 font-medium">Premium Transportation</p>
+                <p className="text-sm text-blue-400 font-medium">Transportation</p>
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              Charleston's premier hotel shuttle service. Luxury transportation with instant booking technology.
+              Charleston's hotel shuttle service. Luxury transportation with instant booking technology.
             </p>
             <div className="flex items-center space-x-1 mb-4">
               {[...Array(5)].map((_, i) => (
