@@ -42,9 +42,9 @@ function App() {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-8">About Hotel To Airport Transportation LLC</h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Mr. Charles has proudly served the passenger transportation industry for over 30 years! He has earned numerous glowing
-              reviews on TripAdvisor. Known for his warm personality and genuine love for people, he always prioritizes your comfort
-              and safety, ensuring every journey is enjoyable and memorable.
+              Hotel to Airport Transportation LLC has proudly served the passenger transportation industry for over 30 years, earning
+              numerous glowing reviews on TripAdvisor. Known for their warm hospitality and genuine care for passengers, they
+              consistently prioritize your comfort and safety, ensuring each journey is both enjoyable and memorable.
             </p>
           </div>
         </div>

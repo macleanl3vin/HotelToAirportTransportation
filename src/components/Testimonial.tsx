@@ -23,8 +23,8 @@ const Testimonial: React.FC = () => {
 
         {/* Testimonial Quote */}
         <blockquote className="text-2xl lg:text-3xl text-gray-700 leading-relaxed mb-12 max-w-4xl mx-auto font-medium">
-          "We had an excellent stay at the Francis Marion. They were so wonderful and changed us to a beautiful room. Our ride to the Airport was A++ Our driver Mr. Charles was delightful. Ride was comfortable and quick.
-          I highly recommend them!"
+           "We had an excellent stay at the Francis Marion. They were so wonderful and changed us to a beautiful room. It was A++ Hotel
+          To Airport Transportation LLC was delightful. Ride was comfortable and quick. I highly recommend them!"
         </blockquote>
 
         {/* Customer Info */}
