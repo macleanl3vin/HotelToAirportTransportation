@@ -9,10 +9,10 @@ const Services: React.FC = () => {
     {
       icon: Car,
       title: "Hourly Hotel-to-Airport Shuttle",
-      description: "Comfortable 11-passenger van with licensed professional driver:",
+      description: "Comfortable 11-passenger vans with licensed professional drivers:",
       price: "$25+",
       features: [
-        "Licensed Professional Driver",
+        "Licensed Professional Drivers",
         "Clean & Sanitized Vehicle",
         "Consistent Pricing (No Hidden Fees)",
         "Hourly Availability",
@@ -52,7 +52,7 @@ const Services: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">{t("services.title")}</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Complimentary hotel-to-airport transportation every hour on the hour, starting at 8:00 AM until 4:00 PM, Monday through Sunday.
+            Hotel-to-airport transportation drivers operate every hour on the hour, providing service 24 hours a day, seven days a week.
           </p>
         </div>
 
