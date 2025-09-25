@@ -88,10 +88,14 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">© 2025 Hotel To Airport Transportation. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <a href="\HTAT Privacy Policy PDF.pdf"
+                target="_blank" rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <a href="\HTAT ToS PDF.pdf"
+                target="_blank" rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </a>
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
