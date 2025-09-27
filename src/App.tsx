@@ -1,56 +1,112 @@
+import {useState, useEffect} from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Testimonial from "./components/Testimonial";
 import Footer from "./components/Footer";
+import InitialTermsModal from "./components/InitialTermsModal";
+import TermsModal from "./components/TermsModal";
+import DeclineModal from "./components/DeclineModal";
 import {MapPin} from "lucide-react";
 
+type ModalState = "none" | "initial" | "detailed" | "declined";
+
 function App() {
+  const [modalState, setModalState] = useState<ModalState>("none");
+
+  useEffect(() => {
+    // Check if user has already accepted terms
+    const hasAcceptedTerms = localStorage.getItem("htat-terms-accepted");
+    if (!hasAcceptedTerms) {
+      setModalState("initial");
+    }
+  }, []);
+
+  const handleAcceptBoth = () => {
+    localStorage.setItem("htat-terms-accepted", "true");
+    setModalState("none");
+  };
+
+  const handleReadDetails = () => {
+    setModalState("detailed");
+  };
+
+  const handleBackToInitial = () => {
+    setModalState("initial");
+  };
+
+  const handleDeclineTerms = () => {
+    setModalState("declined");
+  };
+
+  const handleReconsiderTerms = () => {
+    setModalState("initial");
+  };
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
-      <Hero />
-      <Services />
-      <Testimonial />
+      {/* Only show main content if terms are accepted or not yet decided */}
+      {modalState !== "declined" && (
+        <>
+          <Header />
+          <Hero />
+          <Services />
+          <Testimonial />
 
-      {/* Hotels Section */}
-      <section id="hotels" className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-8">Our Partner Hotels</h2>
-          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            We provide exclusive shuttle services from our partner hotels to Charleston International Airport, with guests enjoying priority booking and special rates.
-          </p>
+          {/* Hotels Section */}
+          <section id="hotels" className="py-16 lg:py-24 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-8">Our Partner Hotels</h2>
+              <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                We provide exclusive shuttle services from our partner hotels to Charleston International Airport, with guests enjoying
+                priority booking and special rates.
+              </p>
 
-          <div className="grid md:grid-cols-5 gap-6 mb-12">
-            {["Francis Marion Hotel", "Charleston Place", "Emeline Hotel", "Hampton Inn", , "Hyatt Place Hotel"].map(
-              (hotel, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <MapPin className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="font-bold text-gray-800 mb-2">{hotel}</h3>
-                </div>
-              )
-            )}
-          </div>
-        </div>
-      </section>
+              <div className="grid md:grid-cols-5 gap-6 mb-12">
+                {["Francis Marion Hotel", "Charleston Place", "Emeline Hotel", "Hampton Inn", , "Hyatt Place Hotel"].map(
+                  (hotel, index) => (
+                    <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <MapPin className="h-8 w-8 text-blue-600" />
+                      </div>
+                      <h3 className="font-bold text-gray-800 mb-2">{hotel}</h3>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          </section>
 
-      {/* About Section */}
-      <section id="about" className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-8">About Hotel To Airport Transportation LLC</h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Hotel to Airport Transportation LLC has proudly served the passenger transportation industry for over 30 years, earning
-              numerous glowing reviews on TripAdvisor. Known for their warm hospitality and genuine care for passengers, they
-              consistently prioritize your comfort and safety, ensuring each journey is both enjoyable and memorable.
-            </p>
-          </div>
-        </div>
-      </section>
+          {/* About Section */}
+          <section id="about" className="py-16 lg:py-24 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-8">About Hotel To Airport Transportation LLC</h2>
+              <div className="max-w-4xl mx-auto">
+                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  Hotel to Airport Transportation LLC has proudly served the passenger transportation industry for over 30 years,
+                  earning numerous glowing reviews on TripAdvisor. Known for their warm hospitality and genuine care for passengers,
+                  they consistently prioritize your comfort and safety, ensuring each journey is both enjoyable and memorable.
+                </p>
+              </div>
+            </div>
+          </section>
 
-      <Footer />
+          <Footer />
+        </>
+      )}
+
+      {/* Initial Terms and Conditions Modal */}
+      <InitialTermsModal
+        isOpen={modalState === "initial"}
+        onAcceptBoth={handleAcceptBoth}
+        onReadDetails={handleReadDetails}
+        onDecline={handleDeclineTerms}
+      />
+
+      {/* Detailed Terms and Conditions Modal */}
+      <TermsModal isOpen={modalState === "detailed"} onBack={handleBackToInitial} />
+
+      {/* Decline Modal */}
+      <DeclineModal isOpen={modalState === "declined"} onReconsider={handleReconsiderTerms} />
     </div>
   );
 }
